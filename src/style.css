@@ -1,0 +1,42 @@
+/* === Allgemeines === */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+/* === LOGO === */
+
+.logo {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.logo > div > a > img {
+    height: 500px;
+    width: auto;
+}
+
+.flexHeader {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+/* === HEADER-BOX === */
+
+.header-box {
+    width: 100%;
+    height: 200px;
+}
+
+/* === Produktbilder === */
+
+.green {
+    width: 960px;
+    height: 540px;
+}

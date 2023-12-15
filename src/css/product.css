@@ -1,0 +1,507 @@
+/* === Allgemeines === */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-size: 1.1rem;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+    color: black;
+}
+
+/* === Hilfsklassen === */
+
+.standard-container {
+    max-width: 79%;
+    margin: 0 auto;
+}
+
+/* === GRID-SYSTEM === */
+
+.container {
+    width: 95%;
+    margin-left: auto;   
+    margin-right: auto;
+}
+
+.row::after {
+    content: "";
+    clear: both;     /* <-----  CLEARFIXHACK */
+    display: block;
+}
+
+[class*='col-'] {
+    float: left;
+    min-height: 1px;
+    padding: .8rem;
+}
+
+.col-1 { width: 16.666%; }
+.col-2 { width: 33.333%; }
+.col-3 { width: 50%;     }
+.col-6 { width: 100%;    }
+
+/* === ÜBERSCHRIFTEN === */
+
+.hauptüberschrift {
+    margin-top: 50pt;
+    margin-left: 50pt;
+    color: white;
+    font-size: 2.2rem;
+    font-family: Chomsky;
+    text-shadow: -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black, 3px 3px 0 black; 
+}
+
+.hauptüberschrift2 {
+    color: white;
+    font-size: 2.2rem;
+    font-family: Chomsky;
+    text-shadow: -3px -3px 0 red, 3px -3px 0 red, -3px 3px 0 red, 3px 3px 0 red; 
+    text-align: center;
+}
+
+/* === SCHRIFTARTEN === */
+
+@font-face {
+    font-family: Ancient Medium;
+    src: local('Ancient Medium') url('../fonts/Ancient\ Medium.ttf');
+}
+
+@font-face {
+    font-family: Chomsky;
+    src: local('Chomsky') url('../fonts/Chomsky.woff2');
+}
+
+/* === NAVIGATIONSLEISTE === */
+
+.navContainer .nav:link {
+    background-color: red;
+}
+
+.navContainer .nav:hover {
+    background-color: rgb(241, 0, 0);
+    /* @media only screen and (min-width: 750px)
+    h5, .h5 {
+    font-size: 1.3rem;
+    } */
+}
+
+.navContainer .nav:active {
+    background-color: rgb(241, 0, 0);
+    /* @media only screen and (min-width: 750px)
+    h5, .h5 {
+    font-size: 1.3rem;
+    } */
+}
+
+.navContainer .nav:visited {
+    background-color: red;
+}
+
+.navContainer a:link {
+    color: black;
+    text-decoration: none;
+}
+
+.navContainer a:hover {
+    color: black;
+    text-decoration: none;
+    /* @media only screen and (min-width: 750px)
+    h5, .h5 {
+    font-size: 1.3rem;
+    } */
+}
+
+.navContainer a:active {
+    color: black;
+    text-decoration: none;
+    /* @media only screen and (min-width: 750px)
+    h5, .h5 {
+    font-size: 1.3rem;
+    } */
+}
+
+.navContainer a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.nav {
+    width: 100%;
+    background-color: red;
+    text-align: center;
+    font-family: inherit;
+    
+}
+
+.nav h5 {
+    font-size: .75rem;
+    font-weight: 750;
+    letter-spacing: .2rem;
+    width: 100%;
+    margin: 0;
+    padding: 11px 20px;
+    top: 11px;
+}
+
+/* === HEADER === */
+
+.header {
+    width: 100%;
+    height: 240px;
+    background-color: rgb(19, 18, 18);
+    display: inline-block;
+
+}
+
+.header .col-6 {
+    padding: 0;
+}
+
+.header .container,
+.header .row,
+.header .col-6 {
+    height: 100%;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 240px;
+}
+
+.logo img {
+    height: 240px;
+    width: auto;
+}
+
+.warenkorb {
+    position: absolute;
+    right: 10rem;
+    top: 8rem;
+    height: 30px;
+}
+
+.warenkorb a:link {
+    color: white;
+}
+
+.warenkorb a:visited {
+    color: white;
+}
+
+.warenkorb svg:hover {
+    color: #e5e5e5;
+}
+
+.warenkorb svg:active {
+    color: #e5e5e5;
+}
+
+.social .container,
+.social .row,
+.social .col-3 {
+    height: 100%
+}
+
+.social p {
+    position: absolute;
+    color: white;
+    font-size: 1.2rem;
+    font-family: Chomsky;
+    left: 5rem;
+    top: 6.8rem;
+}
+
+.instagram {
+    position: absolute;
+    left: 15rem;
+    top: 8rem;
+    height: 30px;
+}
+
+.instagram a:link {
+    color: white;
+}
+
+.instagram a:visited {
+    color: white;
+}
+
+.instagram svg:hover {
+    color: #e5e5e5;
+}
+
+.instagram svg:active {
+    color: #e5e5e5;
+}
+
+.twitter {
+    position: absolute;
+    left: 20rem;
+    top: 8rem;
+    height: 30px;
+}
+
+.twitter a:link {
+    color: white;
+}
+
+.twitter a:visited {
+    color: white;
+}
+
+.twitter svg:hover {
+    color: #e5e5e5;
+}
+
+.twitter svg:active {
+    color: #e5e5e5;
+}
+
+/* === Katalog-Seite ===*/
+
+.catalog {
+    margin: 50px 0;
+}
+
+.catalog::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.catalog .product {
+    float: left;
+    width: 32.3033%;
+    margin: 0 .5150166666666667%;
+    font-size: small;
+    
+} 
+
+.catalog .product img {
+    width: 100%;
+    background-color: hwb(0 97% 3%);
+    /* SCALE */	
+    -webkit-transform: scale(1);	
+    -moz-transform: scale(1);	
+    -ms-transform: scale(1);	
+    -o-transform: scale(1);	
+    transform: scale(1);	
+    /* VERZÖGERUNG */	
+    -webkit-transition: all 0.5s linear;	
+    -moz-transition: all 0.5s linear;	
+    -ms-transition: all 0.5s linear;	
+    -o-transition: all 0.5s linear;	
+    transition: all 0.5s linear;}
+    
+    .catalog .product img:hover {
+    background-color: hwb(0 95% 5%);
+    -webkit-transform: scale(1.02);	
+    -moz-transform: scale(1.02);	
+    -ms-transform: scale(1.02);	
+    -o-transform: scale(1.02);	
+    transform: scale(1.02);
+}
+
+.catalog .product2 {
+    float: left;
+    width: 50%;
+    font-size: small;
+} 
+
+.catalog .product2 .hauptüberschrift2 p {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 100px;
+}
+
+.catalog .product2 img {
+    width: 100%;
+    background-color: hwb(0 97% 3%);
+    /* SCALE */	
+    -webkit-transform: scale(1);	
+    -moz-transform: scale(1);	
+    -ms-transform: scale(1);	
+    -o-transform: scale(1);	
+    transform: scale(1);	
+    /* VERZÖGERUNG */	
+    -webkit-transition: all 0.5s linear;	
+    -moz-transition: all 0.5s linear;	
+    -ms-transition: all 0.5s linear;	
+    -o-transition: all 0.5s linear;	
+    transition: all 0.5s linear;}
+    
+    .catalog .product2 img:hover {
+    background-color: hwb(0 95% 5%);
+    -webkit-transform: scale(1.02);	
+    -moz-transform: scale(1.02);	
+    -ms-transform: scale(1.02);	
+    -o-transform: scale(1.02);	
+    transform: scale(1.02);
+}
+
+/* Wheel */
+
+.product2 .wheel {
+    text-align: center;
+}
+
+.product2 .wheel button {
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+  }
+
+/* === Produktbilder === */
+
+.abstand {
+    height: 100%;
+    margin-bottom: 400px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.bilder img {
+    width: 960px;
+    height: 540px;
+}
+
+/* === footer === */
+
+.footer {
+    height: 366px;
+    background-color: rgb(19, 18, 18);
+}
+
+.footer_top {
+    height: 188px;
+    color: white;
+    font-size: .71rem;
+}
+
+.footer_top .footer-block_newsletter {
+    width: 360px;
+    padding: 45px 0;
+}
+
+.footer_top h2 {
+    font-weight: 550;
+}
+
+.footer_top .field_input {
+    
+}
+
+.footer_top .field_button {
+    background-color: transparent;
+    border: 0;
+    color: rgba(255, 255, 255, 0.644);
+    font-size: 1.2rem;
+    position: absolute;
+}
+
+.footer_top #newsletter {
+    width: 360px;
+    height: 45px;
+    text-align: left;
+    background-color: transparent;
+    
+    
+}
+
+.footer_top #newsletter button {
+    margin-left: -20px;
+}
+
+
+.footer_bottom {
+    height: 178px;
+    border-top: solid 0.1rem rgba(255, 255, 255, .08);
+    color: white;
+}
+
+
+/* === MEDIA-QUERIES === */
+
+@media screen and (max-width: 1024px) {
+    .warenkorb {
+        position: absolute;
+        right: 2rem;
+        top: 4rem;
+        height: 30px;
+    }   
+
+    .social p {
+        display: none;
+    }
+    
+    .instagram {
+        position: absolute;
+        left: 2rem;
+        top: 4rem;
+    }  
+
+    .twitter {
+        position: absolute;
+        left: 7rem;
+        top: 4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .warenkorb {
+        position: absolute;
+        right: 2rem;
+        top: 4rem;
+        height: 30px;
+    }   
+}
+
+@media screen and (max-width: 480px) {
+    .warenkorb {  
+        position: absolute;
+        right: .5rem;
+        top: 3.2rem;
+        height: 30px;
+    }   
+
+    .logo img {
+        width: 200px;
+        height: 200px;
+    }  
+
+    .instagram {
+        position: absolute;
+        left: .5rem;
+        top: 3.2rem;
+    }  
+
+    .twitter {
+        position: absolute;
+        left: 3.5rem;
+        top: 3.2rem;
+    }
+}
+
+/*
+
+=== WICHTIGE BREAKPOINTS ===
+
+480   Pixel (iPhone Querformat)
+768   Pixel (iPad Hochformat)
+1024  Pixel (iPad Querformat)
+
+*/

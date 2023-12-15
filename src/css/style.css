@@ -1,0 +1,228 @@
+/* === Allgemeines === */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-size: 1.1rem;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+
+/* === ÜBERSCHRIFTEN === */
+
+.hauptüberschrift {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color: black;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: Chomsky;
+    text-shadow: -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red, 1px 1px 0 red;
+    
+}
+
+/* === SCHRIFTARTEN === */
+
+@font-face {
+    font-family: Ancient Medium;
+    src: local('Ancient Medium') url('../fonts/Ancient\ Medium.ttf');
+}
+
+@font-face {
+    font-family: Chomsky;
+    src: local('Chomsky') url('../fonts/Chomsky.woff2');
+}
+
+/* === HEADER === */
+
+.header {
+    width: 100%;
+    height: 250px;
+}
+
+.logo {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    height: 250px;
+}
+
+.logo img {
+    height: 250px;
+    width: auto;
+}
+
+.warenkorb {
+    position: absolute;
+    right: 2rem;
+    top: 1.8rem;
+}
+
+.warenkorb a:link {
+    color: white;
+}
+
+.warenkorb a:visited {
+    color: white;
+}
+
+.warenkorb svg:hover {
+    color: red;
+}
+
+.warenkorb svg:active {
+    color: red;
+}
+
+.social p {
+    position: absolute;
+    color: white;
+    font-size: 1.2rem;
+    font-family: Chomsky;
+    left: 2rem;
+    top: 1.3rem;
+}
+
+.instagram {
+    position: absolute;
+    left: 10rem;
+    top: 2.3rem;
+}
+
+.instagram a:link {
+    color: white;
+}
+
+.instagram a:visited {
+    color: white;
+}
+
+.instagram svg:hover {
+    color: red;
+}
+
+.instagram svg:active {
+    color: red;
+}
+
+.twitter {
+    position: absolute;
+    left: 15rem;
+    top: 2.3rem;
+}
+
+.twitter a:link {
+    color: white;
+}
+
+.twitter a:visited {
+    color: white;
+}
+
+.twitter svg:hover {
+    color: red;
+}
+
+.twitter svg:active {
+    color: red;
+}
+
+/* === STARTSEITE === */
+
+/* === Produktbilder === */
+
+.flex {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.bilder {
+    width: 960px;
+    height: auto;
+    margin-bottom: 200px;
+}
+
+.bilder img {
+    height: auto;
+    width: 100%;
+    
+    /* width: 960px;
+    height: 540px; */
+}
+
+/* === MEDIA-QUERIES === */
+
+@media screen and (max-width: 1024px) {  
+    .social p {
+        display: none;
+    }
+
+    .instagram {
+        left: 2rem;
+    }
+
+    .twitter {
+        left: 7rem;
+    }
+
+    .bilder {
+        margin-bottom: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .warenkorb svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .instagram svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .twitter svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .instagram {
+        top: 2.05rem;
+    }
+
+    .twitter {
+        top: 2.05rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo img {
+        width: 200px;
+        height: 200px;
+    }  
+
+    .warenkorb {
+        top: .8rem;
+        right: 1rem;
+    }
+    
+    .instagram {
+        top: 1rem;
+        left: .8rem;
+    }
+
+    .twitter {
+        top: 1rem;
+        left: 4.5rem;
+    }
+}
