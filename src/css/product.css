@@ -524,7 +524,12 @@ body {
         right: .5rem;
         top: 3.2rem;
         height: 30px;
-    }   
+    } 
+    
+    .logo {
+        width: 200px;
+        height: 200px;
+    }
 
     .logo img {
         width: 200px;
