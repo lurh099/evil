@@ -19,17 +19,13 @@ body {
 
 /* === Hilfsklassen === */
 
-.standard-container {
-    max-width: 79%;
-    margin: 0 auto;
-}
+
 
 /* === GRID-SYSTEM === */
 
 .container {
-    width: 95%;
-    margin-left: auto;   
-    margin-right: auto;
+    max-width: 79%;
+    margin: 0 auto;
 }
 
 .row::after {
@@ -41,7 +37,7 @@ body {
 [class*='col-'] {
     float: left;
     min-height: 1px;
-    padding: .8rem;
+    padding: .35%;
 }
 
 .col-1 { width: 16.666%; }
@@ -283,8 +279,9 @@ body {
 
 .catalog .product {
     float: left;
-    width: 32.3033%;
-    margin: 0 .5150166666666667%;
+    width: 100%;
+    /* width: 32.3033%; */
+    /* margin: 0 .5150166666666667%; */
     font-size: small;
     
 } 
@@ -316,7 +313,8 @@ body {
 
 .catalog .product2 {
     float: left;
-    width: 50%;
+    width: 100%;
+    /* width: 50%; */
     font-size: small;
 } 
 
@@ -392,6 +390,7 @@ body {
 }
 
 .footer_top .footer-block_newsletter {
+    position: relative;
     width: 360px;
     padding: 45px 0;
 }
@@ -401,15 +400,20 @@ body {
 }
 
 .footer_top .field_input {
-    
 }
 
 .footer_top .field_button {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: transparent;
     border: 0;
     color: rgba(255, 255, 255, 0.644);
     font-size: 1.2rem;
     position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .footer_top #newsletter {
@@ -466,9 +470,14 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
+    .container {
+        max-width: 94.8%;
+        margin: 0 auto;
+    }
+
     .warenkorb {
         position: absolute;
-        right: 2rem;
+        right: 3% ;
         top: 4rem;
         height: 30px;
     }   
@@ -479,25 +488,28 @@ body {
     
     .instagram {
         position: absolute;
-        left: 2rem;
+        left: 3%;
         top: 4rem;
     }  
 
     .twitter {
         position: absolute;
-        left: 7rem;
+        left: 10%;
         top: 4rem;
     }
 
     .hauptüberschrift {
-        margin-left: 2rem;
+        margin-left: 3%;
     }
 }
 
 @media screen and (max-width: 768px) {
+    .col-2 { width: 50%; }
+    .col-3 { width: 100%;     }
+
     .warenkorb {
         position: absolute;
-        right: 2rem;
+        /* right: 2rem; */
         top: 4rem;
         height: 30px;
     }   
@@ -512,6 +524,10 @@ body {
         height: 25px;
     }
 
+    .twitter {
+        left: 12%;
+    }
+
     .twitter svg {
         width: 25px;
         height: 25px;
@@ -521,9 +537,8 @@ body {
 @media screen and (max-width: 480px) {
     .warenkorb {  
         position: absolute;
-        right: .5rem;
+        right: 3%;
         top: 3.2rem;
-        height: 30px;
     } 
     
     .logo {
@@ -543,13 +558,13 @@ body {
 
     .instagram {
         position: absolute;
-        left: .5rem;
+        left: 3%;
         top: 3.2rem;
     }  
 
     .twitter {
         position: absolute;
-        left: 3.5rem;
+        left: 17%;
         top: 3.2rem;
     }
 
