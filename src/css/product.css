@@ -384,7 +384,7 @@ body {
 }
 
 .footer .col-3 {
-    padding: 0;
+    padding: 0 .35%;
 }
 
 .footer_top {
@@ -396,12 +396,17 @@ body {
 .footer_top .footer-block_newsletter {
     position: relative;
     width: 360px;
-    padding: 52.5px 0;
+    padding: 47.5px 0;
 }
 
 .footer_top h2 {
-    font-weight: 550;
+    vertical-align: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .06rem;
+    color: white;
     margin-top: 0;
+    margin-bottom: 1.5rem;
 }
 
 .footer_top #newsletter {
