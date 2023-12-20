@@ -606,9 +606,14 @@ body {
     }
 
     .footer_top .footer-block_newsletter {
+        width: 330px;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
+    }
+
+    .footer_top #newsletter {
+        width: 330px;
     }
 
 }
